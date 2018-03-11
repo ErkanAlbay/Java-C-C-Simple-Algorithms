@@ -1,35 +1,42 @@
 #include <iostream>
 using namespace std;
+
+// Kullanıcıdan girilen sayının asal oluğ olmadığını ekrana yazdıran, kullanıcı 0 girdiğinde programdan çıkan program.
 int main()
 {
 	int sayi;
 	bool bl = false;
 do
 {   
-	cout<<"Sayiyi giriniz."<<endl;
-	cin>>sayi
-	for(int i = 2; i<sayi; i++)
-{
-	 if(sayi%i!=0)
+
+cout<<"Sayiyi giriniz."<<endl;
+cin>>sayi //kullanıcıdan sayıyı al.
+
+	for(int i = 2; i<sayi; i++) //döngüyü 2 den başlatıp sayıya kadar devam ettir.
 	{
-	 bl = false; 
-	}
-	else
-	{
-	 bl = true;
-	 break;
+		if(sayi%i!=0) // eğer sayı mod i eşit değilse sıfıra bl değeri false olsun.
+		{
+		 bl = false; 
+		}
+		
+		else
+		
+		{
+	 	bl = true; // eğer sayı mod i sıfıra eşitse bl değeri true olup döngüden çıksın. Çünkü kendisinden önce 1 kez herhangi 
+	        break;     // bir sayıya bölünüp bölümünden kalan sıfırsa sayı asal değildir.
+		}
 	}
 
-}
-if(bl == true)
-{
-cout<<"Sayi asal degildir.";
-}
-if(bl == false)
-{
-cout<<"Sayi asaldir.";
-}
+	if(bl == true)
+	{
+	cout<<"Sayi asal degildir.";
+	}
 
-}while(sayi!=0);
+	if(bl == false)
+	{
+	cout<<"Sayi asaldir.";
+	}
+	
+}while(sayi!=0); // Kullanıcının girdiği sayı 0 olana kadar tekrar et.
 
 }

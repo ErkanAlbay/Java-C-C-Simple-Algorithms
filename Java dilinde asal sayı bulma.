@@ -1,0 +1,26 @@
+   public static void main(String[] args) {
+        boolean bool = false;
+        int sayi;
+        do {
+            System.out.println("Sayiyi girin.");
+            Scanner input = new Scanner(System.in);
+            sayi = input.nextInt();
+
+            for (int i = 2; i < sayi; i++) {
+
+                if (sayi % i != 0) {
+                    bool = false;
+                } else {
+                    bool = true;
+                    break;
+                }
+            }
+            if (bool == true) {
+                System.out.println("Girmiş olduğunuz sayı asal değildir.");
+            } else {
+                System.out.println("Girmiş olduğunuz sayı asaldır");
+            }
+
+        } while (sayi != 0);
+
+    }

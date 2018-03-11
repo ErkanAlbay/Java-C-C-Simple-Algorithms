@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int sayi;
+	bool bl = false;
+do
+{   
+	cout<<"Sayiyi giriniz."<<endl;
+	cin>>sayi
+	for(int i = 2; i<sayi; i++)
+{
+	 if(sayi%i!=0)
+	{
+	 bl = false; 
+	}
+	else
+	{
+	 bl = true;
+	 break;
+	}
+
+}
+if(bl == true)
+{
+cout<<"Sayi asal degildir.";
+}
+if(bl == false)
+{
+cout<<"Sayi asaldir.";
+}
+
+}while(sayi!=0);
+
+}

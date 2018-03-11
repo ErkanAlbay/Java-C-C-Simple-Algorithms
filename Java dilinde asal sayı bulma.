@@ -1,3 +1,5 @@
+  // Kullanıcı 0 girene kadar programdan çıkmayıp girilen sayıların asal olup olmadığını bulmaktadır.
+   
    public static void main(String[] args) {
         boolean bool = false;
         int sayi;

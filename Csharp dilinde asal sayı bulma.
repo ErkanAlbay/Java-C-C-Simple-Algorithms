@@ -1,0 +1,40 @@
+  class Program
+    {
+    
+     // Kullanıcı 0 girene kadar programdan çıkmayıp girilen sayıların asal olup olmadığını bulmaktadır.
+        
+        static void Main(string[] args)
+        {
+            bool bl = false;
+            int sayi;
+            do
+            {
+                Console.Write("Sayıyı Giriniz.");
+                sayi = Int32.Parse(Console.ReadLine());
+
+                for (int i = 2; i < sayi; i++)
+                {
+                    if (sayi%i !=  0)
+                    {
+                        bl = false;
+                    }
+                    else
+                    {
+                        bl = true;
+                        break;
+                    }
+                }
+
+                if(bl==false)
+                {
+                    Console.WriteLine("Sayı Asaldır.");
+                }
+                else
+                {
+                    Console.WriteLine("Sayı Asal Değildir.");
+                }
+
+            } while (sayi != 0);
+            
+        }
+    }
